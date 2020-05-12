@@ -1,0 +1,134 @@
+/*#Card-Main*/ /*body*/
+html,body{
+    height: 100%;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  @media(min-width: 420px) and (max-width: 768px){
+    #Card-Main{
+    background-size: 320px;
+    }
+  }
+  @media (max-width: 767px) {
+    .bottom_ul li{
+      line-height: 20px;
+    }
+    #Card-Main{
+  background-position: center;
+  background-size: contain;
+    }
+    .img_Falta_Pouco{
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+.MyFont {
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+ color: #1f92f5;
+ font-weight: bold;
+ line-height: 90%;
+ font-size: 27px;
+
+}
+
+.lead{
+   font-size: 17px; 
+}
+.card-title{
+ font-size: 25px;
+}
+.big /*logo*/ {
+ color: rgb(0, 0, 0) !important;
+font-weight: bold;
+ font-size: 35px;
+} 
+.btn-primary:hover {
+       font-weight: bold;
+   }
+#Card-Main{
+    height: 100%;
+    margin-top: 8px;
+    margin-left: 0px;
+    flex: 1;
+    background-image: url("../img/PessoaSemFundo.png");
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-color:#fff;
+}
+
+.card-body{
+    background-color: rgba(255, 255, 255, 0.00);
+}
+.main-container{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.barraProgresso{
+    margin-top: -50px;
+    justify-content: center;
+    visibility: hidden;
+}
+.barraProgresso h5{
+width: 100%;
+}
+.cardTotal{
+    background-color: rgba(255,255,255,0.70);
+}
+#maincontent_id{
+    margin-top:3rem;
+    visibility: visible;
+    position: relative;
+    background-color: rgba(255,255,255,0.00);
+    z-index: 2;
+
+}
+.Barras{
+    margin-top: 20px
+}
+
+#respostas_id{
+    margin-top:60px;
+    z-index: 1;
+}
+#subtitulo_id{
+    margin-top:30px;
+}
+
+footer{
+    font-size: 12px;
+}
+
+.direitos {
+    color: gray;
+    font-size: 0.65rem;
+}
+.Contato{
+    align-items:center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.bottom_ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.bottom_ul li, copyright, copyright p {
+    line-height: 40px;
+}
