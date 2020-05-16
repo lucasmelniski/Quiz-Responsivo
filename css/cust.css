@@ -1,6 +1,71 @@
-/*#Card-Main*/ /*body*/
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes run-animation{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-60vw);
+    }
+  }
+  
+  .Run-Animation{
+      animation: run-animation 0.8s ease;
+    }
+    .Reverse-Fade{
+      animation-name: fade;
+      animation-duration: 0.6s;
+      
+      animation-direction: reverse;
+    }
+    .Fade{
+        animation-name: fade;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .Reverse-Run-Animation{
+        animation: run-animation 0.6s ease;
+        animation-direction: reverse;
+    }
 html,body{
-    height: 100%;
+    height: 100vh;
+}
+body{
+    font-size:20px
+}
+.MyFont {
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+ color: #1f92f5;
+ font-weight: bold;
+ line-height: 90%;
+ font-size: 1.5rem;
+}
+.lead{
+   font-size: 0.85rem; 
+}
+.card-title{
+ font-size: 1.25rem;
+}
+.big /*logo*/ {
+ color: rgb(0, 0, 0) !important;
+font-weight: bold;
+ font-size: 1.75rem;
+} 
+.btn-primary:hover {
+       font-weight: bold;
+   }
+#Card-Main{
+    margin-top: 8px;
+    margin-left: 0px;
+    flex: 1;
 }
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -10,73 +75,19 @@ html,body{
     -ms-user-select: none;
     user-select: none;
   }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-  @media(min-width: 420px) and (max-width: 768px){
-    #Card-Main{
-    background-size: 320px;
-    }
-  }
-  @media (max-width: 767px) {
-    .bottom_ul li{
-      line-height: 20px;
-    }
-    #Card-Main{
-  background-position: center;
-  background-size: contain;
-    }
-    .img_Falta_Pouco{
-      position: absolute;
-      visibility: hidden;
-    }
-  }
-
-.MyFont {
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
- color: #1f92f5;
- font-weight: bold;
- line-height: 90%;
- font-size: 27px;
-
-}
-
-.lead{
-   font-size: 17px; 
-}
-.card-title{
- font-size: 25px;
-}
-.big /*logo*/ {
- color: rgb(0, 0, 0) !important;
-font-weight: bold;
- font-size: 35px;
-} 
-.btn-primary:hover {
-       font-weight: bold;
-   }
-#Card-Main{
-    height: 100%;
-    margin-top: 8px;
-    margin-left: 0px;
-    flex: 1;
-    background-image: url("../img/PessoaSemFundo.png");
-    background-size: 350px;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    background-color:#fff;
-}
-
 .card-body{
     background-color: rgba(255, 255, 255, 0.00);
 }
 .main-container{
-    flex:1;
+    height: auto;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
+    background-image: url("../img/bg.jpg");
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-color:#fff;
 }
 .barraProgresso{
     margin-top: -50px;
@@ -95,12 +106,10 @@ width: 100%;
     position: relative;
     background-color: rgba(255,255,255,0.00);
     z-index: 2;
-
 }
 .Barras{
     margin-top: 20px
 }
-
 #respostas_id{
     margin-top:60px;
     z-index: 1;
@@ -108,27 +117,32 @@ width: 100%;
 #subtitulo_id{
     margin-top:30px;
 }
-
 footer{
-    font-size: 12px;
+    font-size: 0.60rem;
 }
-
 .direitos {
     color: gray;
     font-size: 0.65rem;
 }
-.Contato{
-    align-items:center;
-    justify-items: center;
-    justify-content: center;
-}
-
 .bottom_ul{
     list-style-type: none;
     padding: 0;
     margin-bottom: 0px;
 }
-
-.bottom_ul li, copyright, copyright p {
+.bottom_ul li, .copyright, .copyright p {
     line-height: 40px;
 }
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 767px) {
+.main-container{
+        background-position: center;
+        overflow:auto;
+          }
+    .bottom_ul li, .copyright, .copyright p {
+        line-height: 20px;
+    }
+  }
